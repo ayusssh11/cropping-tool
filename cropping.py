@@ -4,8 +4,12 @@ import cv2
 import numpy as np
 from tkinter import Tk, filedialog, messagebox
 import os
+print("3:2 type 1")
+print("1:1 type 2")
+op1 = input("Enter your choice")
 
-def crop_to_square(image_path, output_path="cropped_image.jpg"):
+if op1 == 2:
+    def crop_to_square(image_path, output_path="cropped_image.jpg"):
     """
     Crop an image to a 1:1 aspect ratio by centering the crop.
     :param image_path: Path to the input image.
@@ -35,8 +39,7 @@ def crop_to_square(image_path, output_path="cropped_image.jpg"):
         print(f"Image successfully cropped and saved at {output_path}")
     except Exception as e:
         print(f"Error: {e}")
-
-def select_and_crop_image():
+        def select_and_crop_image():
     """
     GUI-based method to select an image and crop it.
     """
@@ -67,9 +70,16 @@ def select_and_crop_image():
     except Exception as e:
         messagebox.showerror("Error", f"An error occurred: {e}")
 
+
+    
+
 if __name__ == "__main__":
     # Uncomment the following line for CLI usage:
     # crop_to_square("path_to_image.jpg", "output_image.jpg")
 
     # For GUI usage
     select_and_crop_image()
+
+    
+
+
